@@ -22,3 +22,17 @@ ocr.avionai.co {
     }
 }
 
+ollama.yourdomain.com {
+    encode gzip
+
+    @api {
+        path /api/*
+        path /v1/*
+    }
+
+    reverse_proxy @api 127.0.0.1:11434 {
+        header_up Host {host}
+        header_up X-Forwarded-For {remote}
+    }
+}
+
