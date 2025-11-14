@@ -1,0 +1,24 @@
+avionai.co {
+    root * /srv/avionai.co
+    file_server
+}
+
+n8n.avionai.co {
+    reverse_proxy n8n:5678 {
+      flush_interval -1
+    }
+}
+
+www.avionai.co {
+    redir https://avionai.co{uri}
+}
+
+ocr.avionai.co {
+    reverse_proxy 172.17.0.1:6000 {
+        transport http {
+            read_timeout 120s
+            write_timeout 120s
+        }
+    }
+}
+

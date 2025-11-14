@@ -1,0 +1,7 @@
+paddlepaddle==2.6.1
+paddleocr==2.8.1
+fastapi
+uvicorn[standard]
+python-multipart
+pdf2image
+Pillow
