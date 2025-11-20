@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  xlsx-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: xlsx-generator
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount templates directory - update this path to your templates location
+      - ./templates:/templates:ro
+      # For development: mount app code for hot reload
+      # - ./app:/app/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - avionai-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+networks:
+  avionai-network:
+    external: true
+    # If the network doesn't exist yet, comment out 'external: true' and uncomment below:
+    # driver: bridge
