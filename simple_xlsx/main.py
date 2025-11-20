@@ -123,6 +123,18 @@ def _update_cells(sheet_xml: bytes, cell_updates: Dict[str, Union[str, int, floa
 
     return etree.tostring(root, xml_declaration=False, encoding="utf-8")
 
+@app.get("/")
+def root():
+    return {
+        "service": "xlsx-generator",
+        "status": "online",
+        "message": "XLSX generation service is running 🚀"
+    }
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 
 @app.post("/generate-xlsx", response_model=GenerateResponse)
 def generate_xlsx(payload: GeneratePayload):
