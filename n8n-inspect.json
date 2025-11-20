@@ -1,0 +1,292 @@
+[
+    {
+        "Id": "b3a6614d04dd7c440711f949938c8a6c30a9f3b6c5ad5db79533c34d68735257",
+        "Created": "2025-11-14T23:44:58.846257421Z",
+        "Path": "tini",
+        "Args": [
+            "--",
+            "/docker-entrypoint.sh"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1299,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2025-11-15T01:12:45.46622815Z",
+            "FinishedAt": "2025-11-15T01:12:22.225214256Z"
+        },
+        "Image": "sha256:3f0c599d2f203177e6ce57b6f0d1a2815db52c25f9bbe59851ab3b4acc32d280",
+        "ResolvConfPath": "/var/lib/docker/containers/b3a6614d04dd7c440711f949938c8a6c30a9f3b6c5ad5db79533c34d68735257/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/b3a6614d04dd7c440711f949938c8a6c30a9f3b6c5ad5db79533c34d68735257/hostname",
+        "HostsPath": "/var/lib/docker/containers/b3a6614d04dd7c440711f949938c8a6c30a9f3b6c5ad5db79533c34d68735257/hosts",
+        "LogPath": "/var/lib/docker/containers/b3a6614d04dd7c440711f949938c8a6c30a9f3b6c5ad5db79533c34d68735257/b3a6614d04dd7c440711f949938c8a6c30a9f3b6c5ad5db79533c34d68735257-json.log",
+        "Name": "/avionai_n8n_1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "n8n_data:/home/node/.n8n:rw",
+                "/opt/paddleocr:/opt/paddleocr:rw",
+                "/opt/avionai/local_files:/files:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "avionai_default",
+            "PortBindings": {
+                "5678/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "5678"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "ID": "b3a6614d04dd7c440711f949938c8a6c30a9f3b6c5ad5db79533c34d68735257",
+                "LowerDir": "/var/lib/docker/overlay2/406d67d69862fb144becbdfae620208bf3551e6a36a4100975f76e7d9831e4bf-init/diff:/var/lib/docker/overlay2/d34835c41150222ffbebca974400812a059c6af79be0f98ce6f935e32e5e0beb/diff:/var/lib/docker/overlay2/564df4499eba1288e2ac13b3fa9c1fd6d57f9724cc52bffe60a9c4202d055d9b/diff:/var/lib/docker/overlay2/0be8e8bdd0d8b087057fb8e533f182d6ef2fc2f7c90d508ab848840a2e0675c2/diff:/var/lib/docker/overlay2/90f5b624f70b48113f2d2e0dbba1e559c0b7133f1496ec861ef3cb1b521682bb/diff:/var/lib/docker/overlay2/bb905f68f323afebdf56db60850d1153db6d6f48105ceec8eadd0efeb34e598b/diff:/var/lib/docker/overlay2/843f3ed1662377488d93ba9721af269133478487e4f8053c0e40de018db18c09/diff:/var/lib/docker/overlay2/28309fef4cb69d6027114338b46a610a98b11e1a15a87ddb43b7f5e6e0ba7bcd/diff:/var/lib/docker/overlay2/9ee1f9a9b89867037029641b8b03b6fca5b8102213f48e3d91b13c27b07ebf17/diff:/var/lib/docker/overlay2/7c7eec274ab16c85f53fdf44ff8fdc27f27f329ab012513b78dec8e0ae75dc4d/diff:/var/lib/docker/overlay2/326bc111f3f392df99e4f057ee0350b1302307cc3e898f95428be18e30f4731d/diff:/var/lib/docker/overlay2/6e2c8a482554d13f189eac6d8ee60e431bef9a87eac500487d4260d2f9569712/diff:/var/lib/docker/overlay2/b19e533fc2f8eb664f4dc4dc9c7d07662100aa86b3dad39d10954ee0f29fb5c6/diff:/var/lib/docker/overlay2/257b85e3f26f840fa6486767f2f6412fb777efc9cb418acbf63cfbab009ee2eb/diff",
+                "MergedDir": "/var/lib/docker/overlay2/406d67d69862fb144becbdfae620208bf3551e6a36a4100975f76e7d9831e4bf/merged",
+                "UpperDir": "/var/lib/docker/overlay2/406d67d69862fb144becbdfae620208bf3551e6a36a4100975f76e7d9831e4bf/diff",
+                "WorkDir": "/var/lib/docker/overlay2/406d67d69862fb144becbdfae620208bf3551e6a36a4100975f76e7d9831e4bf/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/opt/avionai/local_files",
+                "Destination": "/files",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "volume",
+                "Name": "n8n_data",
+                "Source": "/var/lib/docker/volumes/n8n_data/_data",
+                "Destination": "/home/node/.n8n",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/opt/paddleocr",
+                "Destination": "/opt/paddleocr",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "b3a6614d04dd",
+            "Domainname": "",
+            "User": "node",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5678/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "N8N_HOST=n8n.avionai.co",
+                "N8N_PORT=5678",
+                "N8N_PROTOCOL=https",
+                "NODE_ENV=production",
+                "WEBHOOK_URL=https://n8n.avionai.co/",
+                "GENERIC_TIMEZONE=America/New York",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NODE_VERSION=22.21.0",
+                "YARN_VERSION=1.22.22",
+                "NODE_ICU_DATA=/usr/local/lib/node_modules/full-icu",
+                "N8N_RELEASE_TYPE=stable",
+                "SHELL=/bin/sh"
+            ],
+            "Cmd": null,
+            "Image": "docker.n8n.io/n8nio/n8n",
+            "Volumes": {
+                "/files": {},
+                "/home/node/.n8n": {},
+                "/opt/paddleocr": {}
+            },
+            "WorkingDir": "/home/node",
+            "Entrypoint": [
+                "tini",
+                "--",
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "bd7a0dc7d677dda234c3e536552ac162c721d29a6899c83164b43aa0794fe5ba",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "avionai",
+                "com.docker.compose.project.config_files": "docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/opt/avionai",
+                "com.docker.compose.service": "n8n",
+                "com.docker.compose.version": "1.29.2",
+                "org.opencontainers.image.description": "Workflow Automation Tool",
+                "org.opencontainers.image.source": "https://github.com/n8n-io/n8n",
+                "org.opencontainers.image.title": "n8n",
+                "org.opencontainers.image.url": "https://n8n.io",
+                "org.opencontainers.image.version": "1.119.1"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "7d9107c05c97032129704cab5f1924f2196aed6db0343a0d9506e0de50517f28",
+            "SandboxKey": "/var/run/docker/netns/7d9107c05c97",
+            "Ports": {
+                "5678/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "5678"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "5678"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "avionai_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "n8n",
+                        "b3a6614d04dd"
+                    ],
+                    "MacAddress": "f2:73:bf:a9:53:ae",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "88e7555e33ded786f227409ef1c82c1388d468e2d24fcc427c1024c4273bab15",
+                    "EndpointID": "84e1d2208fc69c7810d2e2101320b69a1d6b575e87bda8ccdbbf673873d165a4",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "avionai_n8n_1",
+                        "n8n",
+                        "b3a6614d04dd"
+                    ]
+                }
+            }
+        }
+    }
+]

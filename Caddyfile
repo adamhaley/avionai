@@ -1,0 +1,46 @@
+avionai.co {
+    root * /srv/avionai.co
+    file_server
+}
+
+n8n.avionai.co {
+    reverse_proxy n8n:5678
+
+    header {
+        Content-Security-Policy "default-src * data: blob: 'unsafe-inline' 'unsafe-eval'"
+        X-Content-Type-Options "nosniff"
+    }
+}
+
+www.avionai.co {
+    redir https://avionai.co{uri}
+}
+
+ocr.avionai.co {
+    reverse_proxy 172.17.0.1:6000 {
+        transport http {
+            read_timeout 120s
+            write_timeout 120s
+        }
+    }
+}
+
+ollama.avionai.co {
+    @auth {
+        not header Authorization "Bearer 4ec83ac4ed1202b1d901cb5fb3dbae51e7c69d79e89ab86d46c2b32d5535e62c0"
+    }
+    respond @auth "Unauthorized" 401
+
+    encode gzip
+
+    @api {
+        path /api/*
+        path /v1/*
+    }
+
+    reverse_proxy @api 172.17.0.1:11434 {
+        header_up Host {host}
+        header_up X-Forwarded-For {remote}
+    }
+}
+
