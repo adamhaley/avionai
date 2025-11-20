@@ -7,6 +7,7 @@ import zipfile
 from lxml import etree
 from pathlib import Path
 import datetime as dt
+from fastapi.responses import Response
 
 app = FastAPI()
 
@@ -135,7 +136,6 @@ def root():
 def health():
     return {"status": "ok"}
 
-
 @app.post("/generate-xlsx", response_model=GenerateResponse)
 def generate_xlsx(payload: GeneratePayload):
     template_path = TEMPLATE_DIR / payload.template
@@ -185,9 +185,13 @@ def generate_xlsx(payload: GeneratePayload):
 
     file_name = f"lease-summary-{payload.fields.get('msn', '') or int(dt.datetime.utcnow().timestamp())}.xlsx"
 
-    return GenerateResponse(
-        file_name=file_name,
-        mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        data=b64,
+
+
+    return Response(
+        content=out_buf.getvalue(),
+        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        headers={
+            "Content-Disposition": 'attachment; filename="output.xlsx"'
+        }
     )
 
