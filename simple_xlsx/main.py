@@ -25,6 +25,8 @@ NS = {
 # TODO: update the cell refs to match your actual template layout
 TEMPLATE_FIELD_MAP: Dict[str, Dict[str, str]] = {
     "Template.xlsx":  {
+    TEMPLATE_FIELD_MAP = {
+        # --- Top of Sheet (General) ---
         "seller": "B6",
         "lessee": "B7",
         "msn": "B8",
@@ -33,9 +35,11 @@ TEMPLATE_FIELD_MAP: Dict[str, Dict[str, str]] = {
         "engine_type": "B11",
         "thrust": "B12",
 
-        "lease_start": "B14",
+        # --- Lease Dates ---
+        "lease_start": "B14",  
         "lease_end": "B15",
 
+        # --- Airframe Status ---
         "ac_last_heavy_check_date": "B19",
         "ac_tsn_at_last_sv": "B20",
         "ac_csv_at_last_sv": "B21",
@@ -44,7 +48,7 @@ TEMPLATE_FIELD_MAP: Dict[str, Dict[str, str]] = {
         "ac_hours_limit": "B24",
         "ac_cycles_limit": "B25",
 
-        # Engine 1
+        # --- Engine 1 ---
         "eng_1_sn": "B27",
         "eng_1_last_performance_shop_visit_date": "B29",
         "eng_1_tslv_last_sv": "B30",
@@ -56,7 +60,7 @@ TEMPLATE_FIELD_MAP: Dict[str, Dict[str, str]] = {
         "eng_1_llp_limiter": "B36",
         "eng_1_limiting_cycles": "B37",
 
-        # Engine 2
+        # --- Engine 2 ---
         "eng_2_sn": "B38",
         "eng_2_last_performance_shop_visit_date": "B39",
         "eng_2_tslv_last_sv": "B41",
@@ -68,7 +72,7 @@ TEMPLATE_FIELD_MAP: Dict[str, Dict[str, str]] = {
         "eng_2_llp_limiter": "B47",
         "eng_2_limiting_cycles": "B48",
 
-        # APU
+        # --- APU ---
         "apu_serial_number": "B50",
         "apu_manufacturer": "B51",
         "apu_model": "B52",
@@ -79,7 +83,7 @@ TEMPLATE_FIELD_MAP: Dict[str, Dict[str, str]] = {
         "apu_tslv": "B58",
         "apu_cslv": "B59",
 
-        # Landing Gear - Nose
+        # --- Landing Gear (Nose) ---
         "lg_nose_serial_number": "B61",
         "lg_nose_tsn": "B62",
         "lg_nose_csn": "B63",
@@ -88,7 +92,7 @@ TEMPLATE_FIELD_MAP: Dict[str, Dict[str, str]] = {
         "lg_nose_interval_fc": "B66",
         "lg_nose_interval_time": "B67",
 
-        # Landing Gear - Others
+        # --- Landing Gear (MLG) placeholders to be clarified ---
         "repeat_above_for_rh_mlg": "B69",
         "repeat_above_for_lh_mlg": "B70",
     }
