@@ -257,7 +257,7 @@ def generate_xlsx(payload: GeneratePayload):
         content=out_buf.getvalue(),
         media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         headers={
-            "Content-Disposition": 'attachment; filename="output.xlsx"'
+            "Content-Disposition": f'attachment; filename="{file_name}"'
         }
     )
 
