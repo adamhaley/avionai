@@ -24,13 +24,75 @@ NS = {
 # 🔧 FIELD → CELL mappings per template
 # TODO: update the cell refs to match your actual template layout
 TEMPLATE_FIELD_MAP: Dict[str, Dict[str, str]] = {
-    "Template.xlsx": {   # file name in /templates
-        "msn": "C6",
-        "aircraft_type": "C7",
-        "lessee": "C9",
-        "engine_type": "C10",
-        # ... add all the other fields you care about
-    },
+    "Template.xlsx":  {
+        "seller": "B6",
+        "lessee": "B7",
+        "msn": "B8",
+        "dom": "B9",
+        "aircraft_type": "B10",
+        "engine_type": "B11",
+        "thrust": "B12",
+
+        "lease_start": "B14",
+        "lease_end": "B15",
+
+        "ac_last_heavy_check_date": "B19",
+        "ac_tsn_at_last_sv": "B20",
+        "ac_csv_at_last_sv": "B21",
+        "ac_tsn": "B22",
+        "ac_csn": "B23",
+        "ac_hours_limit": "B24",
+        "ac_cycles_limit": "B25",
+
+        # Engine 1
+        "eng_1_sn": "B27",
+        "eng_1_last_performance_shop_visit_date": "B29",
+        "eng_1_tslv_last_sv": "B30",
+        "eng_1_cslv_last_sv": "B31",
+        "eng_1_tsn": "B32",
+        "eng_1_csn": "B33",
+        "eng_1_last_sv": "B34",
+        "eng_1_last_prsv": "B35",
+        "eng_1_llp_limiter": "B36",
+        "eng_1_limiting_cycles": "B37",
+
+        # Engine 2
+        "eng_2_sn": "B38",
+        "eng_2_last_performance_shop_visit_date": "B39",
+        "eng_2_tslv_last_sv": "B41",
+        "eng_2_cslv_last_sv": "B42",
+        "eng_2_tsn": "B43",
+        "eng_2_csn": "B44",
+        "eng_2_last_sv": "B45",
+        "eng_2_last_prsv": "B46",
+        "eng_2_llp_limiter": "B47",
+        "eng_2_limiting_cycles": "B48",
+
+        # APU
+        "apu_serial_number": "B50",
+        "apu_manufacturer": "B51",
+        "apu_model": "B52",
+        "apu_tsn": "B54",
+        "apu_csn": "B55",
+        "apu_limiting_cycles": "B56",
+        "apu_date_of_last_sv": "B57",
+        "apu_tslv": "B58",
+        "apu_cslv": "B59",
+
+        # Landing Gear - Nose
+        "lg_nose_serial_number": "B61",
+        "lg_nose_tsn": "B62",
+        "lg_nose_csn": "B63",
+        "lg_nose_ts_oh": "B64",
+        "lg_nose_date_of_last_sv": "B65",
+        "lg_nose_interval_fc": "B66",
+        "lg_nose_interval_time": "B67",
+
+        # Landing Gear - Others
+        "repeat_above_for_rh_mlg": "B69",
+        "repeat_above_for_lh_mlg": "B70",
+    }
+
     # You can add more templates here if needed
 }
 
